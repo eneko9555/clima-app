@@ -29,7 +29,7 @@ const ClimaProvider = ({ children }) => {
             const apiKey = import.meta.env.VITE_API_KEY
             const { ciudad, pais } = busqueda
 
-            const url = `http://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}}&limit=1&appid=${apiKey}
+            const url = `https://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}}&limit=1&appid=${apiKey}
             `
             const { data } = await axios(url)
             const { lat, lon } = data[0]
